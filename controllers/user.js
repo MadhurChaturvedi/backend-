@@ -83,6 +83,10 @@ export const login = async (req,res) => {
 
         })
     } catch (error) {
-        
+        console.error("Error:", error);
+        res.status(500).json({
+            success: false,
+            message: "Something went wrong. Server error.",
+        });
     }
 }
