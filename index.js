@@ -10,12 +10,12 @@ app.use(express.json());
 // connect the DB
 connectDB();
 
-app.use("/api/user",userRouter);
+app.use("/api/v1/user",userRouter);
 
 app.get("/",(req,res)=>{
     res.send("NODE ❤️")
 })
 const PORT=process.env.PORT || 5000
 app.listen(PORT,()=>{
-    console.log(`Server is running on port https://localhost:${PORT} 🤖👾👺`.green);
+    console.log(`Server is running on port http://localhost:${PORT} 🤖👾👺`.green);
 })
